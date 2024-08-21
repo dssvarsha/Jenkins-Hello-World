@@ -3,7 +3,7 @@ properties([pipelineTriggers([githubPush()])])
 pipeline {
     environment {
         // name of the image without tag
-        dockerRepo = "dssvarsha/Jenkins-Hello-World"
+        dockerRepo = "varshadadi/junkins"
         dockerCredentials = 'Docker'
         dockerImageVersioned = ""
         dockerImageLatest = ""
@@ -20,7 +20,7 @@ pipeline {
                  branches: [[name: 'master']],
                  userRemoteConfigs: [[
                     url: 'https://www.github.com/dssvarsha/Jenkins-Hello-World.git',
-                    credentialsId: '',
+                    credentialsId: 'Github',
                  ]]
                 ])
             }
